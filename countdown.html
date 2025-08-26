@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Countdown Timer — Unified Mentors / Internship</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="application" aria-label="Countdown Timer Web App">
+      <div class="header">
+        <div class="title">Countdown Timer
+          <div class="subtitle">Internship Project — Unified Mentors • Godavari College of Engineering (DBATU) • B.Tech CSE</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:var(--muted)">Developer: [Your Name]</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px">Academic Year: 2nd Year (2024–2028)</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="left">
+          <div>
+            <label for="hours">Set time (H : M : S)</label>
+            <div class="input-row" style="margin-top:8px">
+              <input id="hours" type="number" min="0" max="999" placeholder="Hours" aria-label="Hours" />
+              <input id="minutes" type="number" min="0" max="59" placeholder="Minutes" aria-label="Minutes" />
+              <input id="seconds" type="number" min="0" max="59" placeholder="Seconds" aria-label="Seconds" />
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+            <button class="btn" id="setBtn">Set Timer</button>
+            <button class="btn" id="savePreset">Save as Default</button>
+            <button class="btn" id="loadPreset">Load Default</button>
+          </div>
+
+          <div style="margin-top:14px">
+            <label>Quick Presets</label>
+            <div class="preset-buttons" style="margin-top:8px">
+              <button class="btn preset" data-mins="5">5 min</button>
+              <button class="btn preset" data-mins="10">10 min</button>
+              <button class="btn preset" data-mins="15">15 min</button>
+              <button class="btn preset" data-mins="25">25 min</button>
+              <button class="btn preset" data-mins="30">30 min</button>
+              <button class="btn preset" data-mins="60">60 min</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <label>Options</label>
+            <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap">
+              <button class="btn" id="toggleSound">Toggle Sound</button>
+              <button class="btn" id="resetAll">Reset All</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="right" aria-live="polite">
+          <div class="clock" id="display"><span class="tick">00</span>:<span class="tick">00</span>:<span class="tick">00</span></div>
+          <div class="small" id="status">Idle • Set a time and press Start</div>
+
+          <div class="actions">
+            <button class="btn large accent" id="startBtn">Start</button>
+            <button class="btn large" id="pauseBtn">Pause</button>
+            <button class="btn large" id="resetBtn">Reset</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>Last used: <span id="lastUsed">—</span></div>
+        <div style="font-size:12px;color:var(--muted)">Built with HTML • CSS • JavaScript • LocalStorage</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
